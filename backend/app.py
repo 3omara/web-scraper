@@ -1,5 +1,6 @@
 from flask import request, jsonify 
 from config import app, model
+from scrapper import scrap_url
 
 @app.route("/")
 def home():
@@ -12,6 +13,13 @@ def summarize():
 
     summary = model.generate_content(model_query)
     return jsonify({"summary": summary.text})
+
+@app.route("/scrap", methods=['POST'])
+def scrap():
+    url = request.json.get("url")
+
+    return jsonify({"urlContent": scrap_url(url)})
+
 
 if __name__ == "__main__":
     app.run(debug=True)
