@@ -4,7 +4,7 @@ from scraper import scrape_url
 
 @app.route("/")
 def home():
-    return "web-scraper"
+    return "web-scraper", 200
 
 @app.route("/summarize", methods=['POST'])
 def summarize():
