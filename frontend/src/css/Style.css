@@ -7,21 +7,21 @@
 
 .Node h2 {
   font-weight: lighter;
-  font-size: medium;
+  font-size: small;
   text-align: center;
   background-color: lightblue;
 }
 
-#summaryNode{
+#summaryNode {
   width: fit-content;
   height: fit-content;
   margin: 0;
   padding: 0;
 }
 
-#webScrapperNode{
-  width: 11vw;
-  height: 8vh;
+#webScraperNode {
+  width: 150px;
+  height: 50px;
 }
 
 textarea {
@@ -30,6 +30,9 @@ textarea {
   resize: both;
   box-sizing: border-box;
   height: 100%;
+  min-width: 60px;
+  min-height: 40px;
+  scrollbar-width: none;
 }
 
 input {
@@ -60,4 +63,58 @@ label {
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: gainsboro;
+  overflow-x: hidden;
+  padding-top: 60px;
+}
+
+.dndnode {
+  height: 30px;
+  padding: 10px;
+  font-size: large;
+  background-color: white;
+  border: 5px solid lightblue;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+}
+
+aside {
+  border-right: 1px solid #eee;
+  padding: 15px 10px;
+  font-size: 12px;
+  background: #fcfcfc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+}
+
+.dndflow aside .description {
+  margin-bottom: 10px;
+}
+
+.description {
+  padding-bottom: 20px;
+}
+
+.dndflow aside {
+  width: 20%;
+  max-width: 250px;
+}
+
+body {
+  overflow: hidden;
 }
