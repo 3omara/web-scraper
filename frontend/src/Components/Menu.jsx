@@ -22,6 +22,9 @@ export default function Menu({ setType }) {
       >
         Summary
       </div>
+      <footer>
+        For more information, visit: <a href = "https://github.com/3omara/web-scrapper.git"><em>Github Repository</em></a>
+      </footer>
     </aside>
   );
 }

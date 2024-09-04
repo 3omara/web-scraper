@@ -1,6 +1,5 @@
 from flask import Flask
 from flask_cors import CORS
-from openai import OpenAI
 import google.generativeai as genai
 import os
 
