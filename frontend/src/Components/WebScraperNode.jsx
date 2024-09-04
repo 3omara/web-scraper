@@ -2,7 +2,7 @@ import { Handle, Position, useHandleConnections } from "@xyflow/react";
 import { useEffect, useState } from "react";
 import { stream_reader } from "../helpers";
 
-const webScrapperUrl = "http://127.0.0.1:5000/scrape";
+const webScrapperUrl = "https://web-scraper-backend-lac.vercel.app/scrape";
 
 export default function WebScraperNode({ data }) {
   const [url, setUrl] = useState("");

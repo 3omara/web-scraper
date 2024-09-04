@@ -7,7 +7,7 @@ import {
 import { useEffect, useState } from "react";
 import { stream_reader } from "../helpers";
 
-const summaryUrl = "http://127.0.0.1:5000/summarize";
+const summaryUrl = "https://web-scraper-backend-lac.vercel.app/summarize";
 const default_summary = "Waiting for content to summarize...";
 export default function SummaryNode({}) {
   const [summary, setSummary] = useState(default_summary);
