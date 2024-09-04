@@ -26,7 +26,7 @@ The application is built using Flask for the backend and React for the frontend,
    - The Web Scraping Node checks for this function and, if available, uses it to pass the scraped information through to the summary node. The `onDisconnect` callback resets the communication channel by removing the mentioned function from the `data` object.
 
 ## App Preview
-![preview]("./web-scraper preview.png")
+![preview](./web-scraper-preview.png)
 
 ## Deployed Application
 You can access the live application here: [Web-Scraper](https://web-scraper-weld-tau.vercel.app/)
