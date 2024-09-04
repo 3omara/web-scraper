@@ -13,21 +13,9 @@ import WebScraperNode from "./WebScraperNode";
 import SummaryNode from "./SummaryNode";
 
 const initialNodes = [
-  {
-    id: "dndnode_1",
-    type: "webScraper",
-    position: { x: 0, y: 0 },
-    data: { label: "webScraper node" },
-  },
-  {
-    id: "dndnode_2",
-    type: "summary",
-    position: { x: 0, y: 100 },
-    data: { label: "summary node" },
-  },
 ];
 
-let id = 3;
+let id = 0;
 const getId = () => `dndnode_${id++}`;
 
 const DnDFlow = ({ type }) => {

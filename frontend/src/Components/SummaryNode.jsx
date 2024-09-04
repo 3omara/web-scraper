@@ -41,7 +41,7 @@ export default function SummaryNode({}) {
         setSummary("Nothing to summarize.")
       } else {
         let result = await stream_reader(response)
-        setSummary(result.replace(/[^a-zA-Z0-9,. ]/g, "").slice(9, -2))
+        setSummary(result.replace(/[^a-zA-Z0-9,. ]/g, "").slice(5, -2))
       }
     };
     if(content !== ""){
