@@ -25,5 +25,8 @@ The application is built using Flask for the backend and React for the frontend,
    - In the Summary Node, when a connection is established, the `onConnect` callback sets a state variable with the source node's ID. I use the `useNodesData` hook on the source node's ID to access the node's `data` prop. When this hook updates, it triggers an update using `useEffect` passing a function to the source node's `data` prop which can be later used for cross-node communication.
    - The Web Scraping Node checks for this function and, if available, uses it to pass the scraped information through to the summary node. The `onDisconnect` callback resets the communication channel by removing the mentioned function from the `data` object.
 
+## App Preview
+![preview]("./web-scraper preview.png")
+
 ## Deployed Application
 You can access the live application here: [Web-Scraper](https://web-scraper-weld-tau.vercel.app/)
