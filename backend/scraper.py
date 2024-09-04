@@ -17,6 +17,3 @@ def scrape_url(url):
         content += BeautifulSoup(str(p), 'html').get_text()
 
     return (html.unescape(content)).strip()
-
-######### Test ######### 
-#print(scrap_url("https://stackoverflow.com/questions/159720/what-is-the-naming-convention-in-python-for-variables-and-functions"))
