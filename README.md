@@ -19,12 +19,11 @@ The application is built using Flask for the backend and React for the frontend,
 - Integration with external APIs (Gemini API for summarization)
 
 ## Obstacles Encountered
-1. **Learning React Flow**: As this was my first time using React Flow, it required some time to explore its documentation and features.
-2. **Setting up communication between nodes**: Establishing communication between the custom nodes (Web Scraping and Summary nodes) was challenging. 
-   - **React Flow Hooks**: I used `useHandleConnections` in both nodes to manage connections, and implemented `onConnect` and `onDisconnect` callbacks.
-   - In the Summary Node, when a connection is established, the `onConnect` callback sets a state variable `subscribedNode` with the source node's ID. I then used the `useNodesData` hook to access data from the connected node and trigger an update using `useEffect`. This data exchange was managed through a function passed in the `data` prop of the connected Web Scraping Node.
-   - The Web Scraping Node checks for this function and, if available, passes the scraped data to the Summary Node. The `onDisconnect` callback resets the communication channel by clearing the state.
-3. **React Flow Hook Experimentation**: It took experimentation with different hooks (e.g., `useHandleConnections`, `useNodesData`, and `useEffect`) to find an efficient solution for enabling communication between nodes.
+- **Learning React Flow**: As this was my first time using React Flow, it required some time to explore its documentation and features.
+- **Setting up communication between nodes**: Establishing communication between the custom nodes (Web Scraping and Summary nodes) was challenging and required a good understanding of React Flow custom hooks. 
+   - I used `useHandleConnections` in both nodes to manage connections, and implemented `onConnect` and `onDisconnect` callbacks.
+   - In the Summary Node, when a connection is established, the `onConnect` callback sets a state variable with the source node's ID. I use the `useNodesData` hook on the source node's ID to access the node's `data` prop. When this hook updates, it triggers an update using `useEffect` passing a function to the source node's `data` prop which can be later used for cross-node communication.
+   - The Web Scraping Node checks for this function and, if available, uses it to pass the scraped information through to the summary node. The `onDisconnect` callback resets the communication channel by removing the mentioned function from the `data` object.
 
 ## Deployed Application
 You can access the live application here: [Web-Scraper](https://web-scraper-weld-tau.vercel.app/)
