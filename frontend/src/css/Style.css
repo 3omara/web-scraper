@@ -91,10 +91,10 @@ label {
 }
 
 aside {
-  border-right: 1px solid #eee;
+  border-right: 1px solid gainsboro;
   padding: 15px 10px;
   font-size: 12px;
-  background: #fcfcfc;
+  background: ghostwhite;
   position: fixed;
   top: 0;
   left: 0;
@@ -129,4 +129,11 @@ footer {
   margin-bottom: 30px;
   position: fixed;
   bottom: 0;
+}
+
+input[type="image"] {
+  display: inline-block;
+  width: 30px;
+  height: auto;
+  margin-bottom: 20px;
 }
