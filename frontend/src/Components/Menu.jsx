@@ -1,4 +1,6 @@
 import { useState } from "react";
+import expand_img from "../assets/expand.png"
+import collapse_img from "../assets/collapse.png"
 
 export default function Menu({ setType }) {
   const [isExpanded, setIsExpanded] = useState(true);
@@ -12,7 +14,7 @@ export default function Menu({ setType }) {
         <aside style={{height:"fit-content", width:"fit-content"}}>
           <input
             type="image"
-            src="../assets/expand.png"
+            src={expand_img}
             alt="collapse"
             onClick={() => setIsExpanded(true)}
           />
@@ -21,7 +23,7 @@ export default function Menu({ setType }) {
         <aside>
           <input
             type="image"
-            src="./src/assets/collapse.png"
+            src={collapse_img}
             alt="collapse"
             onClick={() => setIsExpanded(false)}
           />
