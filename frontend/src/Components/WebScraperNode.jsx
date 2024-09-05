@@ -46,7 +46,7 @@ export default function WebScraperNode({ data }) {
   return (
     <>
       <div className="Node" id="webScraperNode">
-        <h2>Web Scrapper</h2>
+        <h2>Web Scraper</h2>
         <Handle type="source" position={Position.Right} />
         <form onSubmit={handle_input}>
           <div className="horizontalContainer">

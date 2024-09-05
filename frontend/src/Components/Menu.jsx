@@ -12,7 +12,7 @@ export default function Menu({ setType }) {
         <aside style={{height:"fit-content", width:"fit-content"}}>
           <input
             type="image"
-            src="/src/assets/expand.png"
+            src="../assets/expand.png"
             alt="collapse"
             onClick={() => setIsExpanded(true)}
           />
@@ -21,7 +21,7 @@ export default function Menu({ setType }) {
         <aside>
           <input
             type="image"
-            src="/src/assets/collapse.png"
+            src="./src/assets/collapse.png"
             alt="collapse"
             onClick={() => setIsExpanded(false)}
           />
